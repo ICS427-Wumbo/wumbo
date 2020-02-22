@@ -8,15 +8,16 @@ class Landing extends React.Component {
         <Grid verticalAlign='middle' textAlign='center' container>
 
           <Grid.Column width={4}>
-            <Image size='small' circular src="/images/meteor-logo.png"/>
+            <Image size='large' circular src="/images/landing.png"/>
           </Grid.Column>
 
           <Grid.Column width={8}>
-            <h1>Welcome to this template</h1>
-            <p>Now get to work and modify this app!</p>
+            <h1>Welcome to Wombo</h1>
+            <p>Wombo is a simple socializing website for you to make friends</p>
           </Grid.Column>
 
         </Grid>
+        
     );
   }
 }
