@@ -10,6 +10,7 @@ import SimpleSchema from 'simpl-schema';
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   name: String,
+  image: String,
   age: Number,
   occupation: String,
   gender: {
@@ -24,9 +25,9 @@ class AddStuff extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, age, occupation, gender} = data;
+    const { name, image, age, occupation, gender} = data;
     const owner = Meteor.user().username;
-    Stuffs.insert({ name, age, occupation, gender, owner },
+    Stuffs.insert({ name, image, age, occupation, gender, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -47,6 +48,7 @@ class AddStuff extends React.Component {
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
                 <TextField name='name'/>
+                <TextField name='image'/>
                 <NumField name='age' decimal={false}/>
                 <TextField name='occupation'/>
                 <SelectField name='gender'/>

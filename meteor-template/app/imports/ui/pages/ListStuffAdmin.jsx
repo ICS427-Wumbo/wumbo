@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Table, Header, Loader} from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/Stuff';
 import StuffItemAdmin from '/imports/ui/components/StuffItemAdmin';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -22,6 +22,7 @@ class ListStuffAdmin extends React.Component {
           <Table celled>
             <Table.Header>
               <Table.Row>
+                <Table.HeaderCell>Image</Table.HeaderCell>
                 <Table.HeaderCell>Name</Table.HeaderCell>
                 <Table.HeaderCell>Age</Table.HeaderCell>
                 <Table.HeaderCell>Occupation</Table.HeaderCell>

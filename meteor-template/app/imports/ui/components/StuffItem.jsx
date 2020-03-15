@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Card, Image} from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -7,15 +7,17 @@ import { withRouter, Link } from 'react-router-dom';
 class StuffItem extends React.Component {
   render() {
     return (
-        <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.age}</Table.Cell>
-          <Table.Cell>{this.props.stuff.occupation}</Table.Cell>
-          <Table.Cell>{this.props.stuff.gender}</Table.Cell>
-          <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
-          </Table.Cell>
-        </Table.Row>
+        <Card>
+          <Image src={this.props.stuff.image}/>
+          <Card.Content>
+            <Card.Header>{this.props.stuff.name}</Card.Header>
+            <Card.Meta>{this.props.stuff.age}</Card.Meta>
+            <Card.Description> {this.props.stuff.name} is a {this.props.stuff.occupation}</Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            {this.props.stuff.gender}
+          </Card.Content>
+        </Card>
     );
   }
 }

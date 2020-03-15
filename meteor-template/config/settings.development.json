@@ -5,9 +5,9 @@
   ],
 
   "defaultData": [
-    { "name": "Kai", "age": 25, "owner": "john@foo.com", "occupation": "student", "gender": "male" },
-    { "name": "Henry", "age": 30, "owner": "john@foo.com", "occupation": "waiter", "gender": "male" },
-    { "name": "Sara", "age": 31, "owner": "john@foo.com", "occupation": "engineer", "gender": "female" },
-    { "name": "Angela", "age": 24, "owner": "john@foo.com", "occupation": "nurse", "gender": "female" }
+    { "name": "Steve", "image": "https://react.semantic-ui.com/images/avatar/large/steve.jpg", "age": 25, "owner": "john@foo.com", "occupation": "student", "gender": "male" },
+    { "name": "Molly", "image": "https://react.semantic-ui.com/images/avatar/large/molly.png", "age": 30, "owner": "john@foo.com", "occupation": "waiter", "gender": "male" },
+    { "name": "Jenny", "image": "https://react.semantic-ui.com/images/avatar/large/jenny.jpg", "age": 31, "owner": "john@foo.com", "occupation": "engineer", "gender": "female" },
+    { "name": "Elliot", "image": "https://react.semantic-ui.com/images/avatar/large/elliot.jpg", "age": 24, "owner": "john@foo.com", "occupation": "nurse", "gender": "female" }
   ]
 }

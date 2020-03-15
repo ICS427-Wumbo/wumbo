@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Image } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/Stuff';
 import StuffItem from '/imports/ui/components/StuffItem';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -19,20 +19,9 @@ class ListStuff extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">List Profile</Header>
-          <Table celled>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>age</Table.HeaderCell>
-                <Table.HeaderCell>occupation</Table.HeaderCell>
-                <Table.HeaderCell>gender</Table.HeaderCell>
-                <Table.HeaderCell>Edit</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
-            </Table.Body>
-          </Table>
+          <Card.Group>
+            {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
+          </Card.Group>
         </Container>
     );
   }
